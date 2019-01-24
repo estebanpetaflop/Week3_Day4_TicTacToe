@@ -63,16 +63,11 @@ class Show
 
   # si on est sur une case gagnante
   def self.is_winning_case(i, j)
-<<<<<<< HEAD
+
     if @@winning_cases == nil
       return false
     end
 
-=======
-    # puts "@@winning_cases" + @@winning_cases.to_s
-    # puts "Conversion.case_name(#{i}, #{j})" + Conversion.case_name(i, j)
-    # puts "Test include : " + @@winning_cases.include?(Conversion.case_name(i, j)).to_s
->>>>>>> 547b84519489cb767df1fdb2c22735b9cd37d8de
     return @@winning_cases.include?(Conversion.case_name(i, j))
   end
 
