@@ -22,15 +22,8 @@ class Application
   
     # while true
     current_player=@game.start_game(@name1,@name2)
-    puts current_player.name + ", time to pick!"
-    puts current_player.name + ", which case do you choose ?"
-    print "> "
-    @boardcase = gets.chomp
-    @game.turn(current_player,@boardcase)
-    @boardcase = gets.chomp
-    @game.turn(current_player,@boardcase)
-    @boardcase = gets.chomp
-    @game.turn(current_player,@boardcase)
+    @game.turn(current_player)
+
     # end
     # Puts the symbol into case
   end

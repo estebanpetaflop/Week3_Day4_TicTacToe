@@ -23,8 +23,13 @@ class Game
 
 
 
-  def turn(current_player, boardcase)
-   @@usedcases << boardcase
+  def turn(current_player)
+   
+   puts current_player.name + ", time to pick!"
+    puts current_player.name + ", which case do you choose ?"
+    print "> "
+    boardcase=gets.chomp
+    @@usedcases << boardcase
     # if @boardcase!= ("A1" || "A2" || "A3" || "B1" || "B2" || "B3" || "C1" || "C2" || "C3") do
     #     return "Nope, that's not a valid case, try again "
     #     # puts "> "
@@ -37,13 +42,16 @@ class Game
       symbol = current_player.symbol
       board = Board.modify_board(symbol,boardcase)
       Show.print_board(board)
+      puts "\nCases gagnantes : #{Verification.get_winning_cases(board)}"
+      other_player=@players.reject{|block| block==current_player}[0]
+      turn(other_player)
   end
 
   
       # changement de player
-  def change_player(current_player)
-    other_player=@@players.delete(current_player)[0]
-  end
+  # def change_player(current_player)
+  #   other_player=@@players.delete(current_player)[0]
+  # end
 
 
   # def end_game
