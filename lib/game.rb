@@ -47,46 +47,6 @@ class Game
         # puts "\nCases gagnantes : #{Verification.get_winning_cases(board)}"
 
 
-      # # Scénarios de fin
-      #   # si personne n'a gagné
-      #   if Verification.get_winning_cases(board)==nil
-      #     # et si ya pas égalité
-      #     if @usedcases.length < 9
-      #       other_player=@players.reject{|block| block==current_player}[0]
-      #       @usedcases << boardcase
-      #       puts current_player.name + ", time to pick!"
-      #       puts current_player.name + ", which case do you choose ?"
-      #       turn(other_player)
-      #     else
-      #       # cas d'égalité
-      #       puts "It's a tie ! Let's play again ?? y/n"
-      #       param = gets.chomp
-      #       # relance d'une partie ??
-      #         case param
-      #         when y
-      #           # @count +=1
-      #           # relance d'une partie
-      #           game2 = Game.new(@player1.name, @player2.name)
-      #           current_player=game2.start_game(@player1.name,@player2.name)
-      #           puts current_player.name + ", time to pick!"
-      #           puts current_player.name + ", which case do you choose ?"
-      #           game2.turn(current_player)
-      #         when n
-      #           puts "OK BYE BYE !"
-      #       end
-      #     end
-      #     # si
-      #   else
-      #     puts "\nWinning cases: #{Verification.get_winning_cases(board)}"
-      #     puts "Congratulations you " + current_player.name + " " + "you are fuck*n' incredible !!"
-      #     # @count = @count + 1
-      #     # relance d'une partie
-      #     game2 = Game.new(@player1.name,@player2.name)
-      #     current_player2=game2.start_game(@player1.name,@player2.name)
-      #     puts current_player2.name + ", time to pick!"
-      #     puts current_player2.name + ", which case do you choose ?"
-      #     game2.turn(current_player2)
-      #   end
 
 
 
@@ -130,36 +90,5 @@ class Game
       end
     end
 
-  # def is_game_over (usedcases,current_player)
-  #     if Verification.get_winning_cases(board)==nil
-  #       if usedcases.length < 9
-  #         return false
-  #       else
-  #         puts "It's a tie ! Let's play again ?? y/n"
-  #         param=gets.chomp
-  #         case param
-  #         when y
-  #           @count +=1
-  #           game2=Game.new
-  #           current_player=game2.start_game(@name1,@name2)
-  #           puts current_player.name + ", time to pick!"
-  #           puts current_player.name + ", which case do you choose ?"
-  #           game2.turn(current_player)
-  #         when n
-  #           puts "OK BYE BYE !"
-  #           break
-  #         end
-  #       end
-  #     else
-  #       puts "\nCases gagnantes : #{Verification.get_winning_cases(board)}"
-  #       puts "Congratulations you " + current_player.name + "you are fuck*n' incredible !!"
-  #       @count +=1
-  #       game2=Game.new
-  #       current_player2=game2.start_game(@name1,@name2)
-  #       puts current_player2.name + ", time to pick!"
-  #       puts current_player2.name + ", which case do you choose ?"
-  #       game2.turn(current_player2)
-  #     end
-  # end
 
 end
