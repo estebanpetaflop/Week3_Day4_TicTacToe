@@ -1,32 +1,40 @@
 class Show
 
-  def self.print_board(board)
+  
+def self.print_board(board)
     system("clear")
     puts
+    print_header
     print_separator
 
-    board.each { |row|
-      print_row(row)
+    board.each.with_index { |row, i|
+      print_row(row, i)
     }
   end
 
+
   private
 
+  def self.print_header
+    puts "         A        B        C     "
+  end
+
   def self.print_separator
-    puts "+--------+--------+--------+"
+    puts "     +--------+--------+--------+"
   end
 
   def self.print_space
-    puts "|        |        |        |"
+    puts "     |        |        |        |"
   end
 
-  def self.print_row(row)
+  def self.print_row(row, row_index)
     print_space
-    puts "|   #{get_emoji(row[0])}   |   #{get_emoji(row[1])}   |   #{get_emoji(row[2])}   |"
+    puts "  #{row_index+1}  |   #{get_emoji(row[0])}   |   #{get_emoji(row[1])}   |   #{get_emoji(row[2])}   |"
     print_space
     print_separator
   end
 
+  # détermine l'emoji correspondant au symbole de la case
   def self.get_emoji(symbol)
     case symbol
     when "X"
@@ -38,10 +46,8 @@ class Show
     end
   end
 
-  def name_question ()
-  end
+  
 
-  def case_question ()
-  end
+  
 
 end
