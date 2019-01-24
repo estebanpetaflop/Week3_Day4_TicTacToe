@@ -7,7 +7,11 @@ class Verification
       ["C1", "C2", "C3"], # cases de la ligne C
       ["A1", "B1", "C1"], # cases de la colonne 1
       ["A2", "B2", "C2"], # cases de la colonne 2
+<<<<<<< HEAD
       ["A3", "B3", "C3"], # cases de la colonne 3
+=======
+      ["A3", "A3", "A3"], # cases de la colonne 3
+>>>>>>> 547b84519489cb767df1fdb2c22735b9cd37d8de
       ["A1", "B2", "C3"], # cases de la 1ère diagonale
       ["C1", "B2", "A3"] # cases de la 2ème diagonale
     ]
